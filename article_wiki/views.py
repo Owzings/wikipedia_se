@@ -15,6 +15,7 @@ def articles(request):
         articles = Article(titre=a, content=b.content)
         time.sleep(60)
         articles.save()
+        print("Un article a été ajouté")
 
     
     context ={} 

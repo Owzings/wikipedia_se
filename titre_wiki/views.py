@@ -1,6 +1,11 @@
 from django.shortcuts import render
 from titre_wiki.models import Titre
 import wikipedia
+from elasticsearch import Elasticsearch 
+
+
+es=Elasticsearch([{'host':'localhost','port':9200}])
+es
 
 # Create your views here.
 def titles(request): 
