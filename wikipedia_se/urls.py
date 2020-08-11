@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from titre_wiki import views
+from titre_wiki import views as titre_views
+from article_wiki import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('titles/', views.titles, name='titles'),
+    path('titles/', titre_views.titles, name='titles'),
+    path('articles/', views.articles, name='articles'),
 ]
