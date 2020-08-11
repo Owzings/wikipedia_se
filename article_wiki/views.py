@@ -15,15 +15,12 @@ def articles(request):
         articles = Article(titre=a, content=b.content)
         time.sleep(60)
         articles.save()
-        
-    # for a in titles:
-    #     title = Titre(titre=a)
-    #     title.save()
+
     
     context ={} 
   
     # # add the dictionary during initialization 
-    # context["dataset"] = Article.objects.all() 
+    context["dataset"] = Article.objects.all() 
     
           
     return render(request, "articles.html", context) 
