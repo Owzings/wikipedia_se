@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GFC_test</title>
+</head>
+<body>
+
+  <h3>Liste des titres</h3>
+
+  {% for data in dataset %}
+
+
+  <li>Titre : {{ data.titre }}</li>
+  <li>Id : {{data.id}}</li>
+  <br>
+
+  <a href={% url 'edit_article' id=data.id %}>Edit</a>
+
+  {% endfor %} 
+
+</br>

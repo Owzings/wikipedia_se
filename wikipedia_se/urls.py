@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from titre_wiki import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('titles/', views.titles, name='titles'),
 ]
